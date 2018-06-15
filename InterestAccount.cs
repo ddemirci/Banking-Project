@@ -9,12 +9,14 @@ namespace Banking_Project
     class InterestAccount : BankAccount
     {
         int counter = 100000;
+        public decimal InterestRate;
 
         public InterestAccount(string CustomerNumber)
         {
             this.AccountID = "IA" + counter.ToString();
             this.Balance = decimal.Zero;
             this.CustomerID = CustomerNumber;
+            InterestRate = Convert.ToDecimal(3);
         }
     }
 }
