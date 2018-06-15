@@ -1,3 +1,4 @@
 C:\Projects\BankingProject\Banking Project\bin\Debug\Banking Project.exe.config
 C:\Projects\BankingProject\Banking Project\obj\Debug\Banking Project.csprojResolveAssemblyReference.cache
 C:\Projects\BankingProject\Banking Project\obj\Debug\Banking Project.csproj.CoreCompileInputs.cache
+C:\Projects\BankingProject\bin\Debug\Banking Project.exe.config
