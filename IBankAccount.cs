@@ -8,8 +8,8 @@ namespace Banking_Project
 {
     interface IBankAccount
     {
-        string withdrawMoney(decimal Amount, string Currency);
-        string depositMoney(decimal Amount, string Currency);
-        string TransferMoney(string ReceiverAccountID, decimal Amount, string Currency);
+        string withdrawMoney(decimal Amount);
+        string depositMoney(decimal Amount);
+        string TransferMoney(string ReceiverAccountID, decimal Amount);
     }
 }

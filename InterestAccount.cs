@@ -19,5 +19,16 @@ namespace Banking_Project
             this.IsInterestAccount = true;
             InterestRate = Convert.ToDecimal(3);
         }
+
+        public decimal CalculateMonthlyInterest(int month)
+        {
+            return this.Balance * (this.InterestRate / 100) * (month / 12);
+        }
+
+        public decimal BalanceAfterInterest(int month)
+        {
+            this.Balance += CalculateMonthlyInterest(month);
+            return this.Balance;
+        }
     }
 }
