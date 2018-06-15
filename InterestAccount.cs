@@ -16,6 +16,7 @@ namespace Banking_Project
             this.AccountID = "IA" + counter.ToString();
             this.Balance = decimal.Zero;
             this.CustomerID = CustomerNumber;
+            this.IsInterestAccount = true;
             InterestRate = Convert.ToDecimal(3);
         }
     }

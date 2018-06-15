@@ -15,6 +15,7 @@ namespace Banking_Project
             this.AccountID = "NI" + counter.ToString();
             this.Balance = decimal.Zero;
             this.CustomerID = CustomerNumber;
+            this.IsInterestAccount = false; 
         }
 
     }

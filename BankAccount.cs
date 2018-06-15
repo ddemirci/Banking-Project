@@ -12,6 +12,7 @@ namespace Banking_Project
         public string AccountID;
         public decimal Balance;
         public string CustomerID;
+        public bool IsInterestAccount;
 
         public const string SuccessMessage = " Successful Transaction Info : ";
         public const string FailureMessage = " Failed Transaction Info : ";
