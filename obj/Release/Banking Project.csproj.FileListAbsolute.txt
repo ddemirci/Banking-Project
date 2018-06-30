@@ -1,0 +1,8 @@
+C:\Projects\BankingProject\bin\Release\Banking Project.exe.config
+C:\Projects\BankingProject\bin\Release\Banking Project.exe
+C:\Projects\BankingProject\bin\Release\Banking Project.pdb
+C:\Projects\BankingProject\obj\Release\Banking_Project.Properties.Resources.resources
+C:\Projects\BankingProject\obj\Release\Banking Project.csproj.GenerateResource.Cache
+C:\Projects\BankingProject\obj\Release\Banking Project.csproj.CoreCompileInputs.cache
+C:\Projects\BankingProject\obj\Release\Banking Project.exe
+C:\Projects\BankingProject\obj\Release\Banking Project.pdb

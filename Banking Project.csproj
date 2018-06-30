@@ -64,6 +64,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="IBankAccount.cs" />
     <Compile Include="InterestAccount.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="NonInterestAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

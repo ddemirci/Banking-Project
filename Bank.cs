@@ -12,7 +12,7 @@ namespace Banking_Project
         List<BankAccount> BankAccountList = new List<BankAccount>();
         List<Customer> CustomerList = new List<Customer>();
 
-        public void OpenAccount(string CustomerID, int type)
+        public BankAccount OpenAccount(string CustomerID, int type)
         {
 
             //BankAccount Acc = ( type == 0 ) ? new InterestAccount(CustomerID): 
@@ -24,11 +24,13 @@ namespace Banking_Project
             {
                 BankAccount acc = new InterestAccount(CustomerID);
                 BankAccountList.Add(acc);
+                return acc;
             }
             else
             {
                 BankAccount acc = new NonInterestAccount(CustomerID);
                 BankAccountList.Add(acc);
+                return acc;
             }
 
         }
@@ -83,7 +85,7 @@ namespace Banking_Project
             throw new NotImplementedException();
         }
 
-        public string DefineCustomer(string fname, string mname, string lname, string email)
+        public Customer DefineCustomer(string fname, string mname, string lname, string email)
         {
             try
             {
@@ -94,14 +96,18 @@ namespace Banking_Project
                     Customer Cust = new Customer(fname, lname, email);
                     Sb.AppendFormat("Customer {0},{1} has been created with Customer Number: {2}"
                         , Cust.LName, Cust.FName, Cust.CustomerID);
+                    Console.WriteLine(Sb.ToString());
+                    return Cust;
                 }
                 else
                 {
                     Customer Cust = new Customer(fname, mname, lname, email);
                     Sb.AppendFormat("Customer {0},{1} {2} has been created with Customer Number: {3} "
                         , Cust.LName, Cust.FName, Cust.MName, Cust.CustomerID);
+                    Console.WriteLine(Sb.ToString());
+                    return Cust;
                 }
-                return Sb.ToString();
+                
             }
             catch (Exception ex)
             {
