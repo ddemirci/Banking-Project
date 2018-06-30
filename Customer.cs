@@ -22,8 +22,10 @@ namespace Banking_Project
             this.LName = lname;
             this.CustomerID = GenerateCustomerID(ref counter);
             this.Email = email;
+            StringBuilder Sb = new StringBuilder();
+            Sb.AppendFormat("Customer {0},{1} has been created with Customer Number: {2} ", LName, FName, CustomerID);
+            Console.WriteLine(Sb.ToString());
 
-            
         }
 
         public Customer(string fname, string mname, string lname, string email)
@@ -37,6 +39,7 @@ namespace Banking_Project
 
             StringBuilder Sb = new StringBuilder();
             Sb.AppendFormat("Customer {0},{1} {2} has been created with Customer Number: {3} ", LName, FName, MName, CustomerID);
+            Console.WriteLine(Sb.ToString());
         }
 
         public string GenerateCustomerID(ref int counter)
