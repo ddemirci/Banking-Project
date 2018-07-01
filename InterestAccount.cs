@@ -18,7 +18,10 @@ namespace Banking_Project
             this.CustomerID = CustomerNumber;
             this.IsInterestAccount = true;
             InterestRate = Convert.ToDecimal(3);
-        }
+            StringBuilder SB = new StringBuilder();
+            SB.AppendFormat("Interest Account {0} of Customer {1} has been created.", AccountID, CustomerID);
+            Console.WriteLine(SB.ToString());
+        }        
 
         public decimal CalculateMonthlyInterest(int month)
         {

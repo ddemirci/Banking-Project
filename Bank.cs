@@ -94,20 +94,34 @@ namespace Banking_Project
                 if (mname != "")
                 {
                     Customer Cust = new Customer(fname, lname, email);
-                    Sb.AppendFormat("Customer {0},{1} has been created with Customer Number: {2}"
-                        , Cust.LName, Cust.FName, Cust.CustomerID);
-                    Console.WriteLine(Sb.ToString());
+                    //Sb.AppendFormat("Customer {0},{1} has been created with Customer Number: {2}"
+                    //    , Cust.LName, Cust.FName, Cust.CustomerID);
+                    //Console.WriteLine(Sb.ToString());
                     return Cust;
                 }
                 else
                 {
                     Customer Cust = new Customer(fname, mname, lname, email);
-                    Sb.AppendFormat("Customer {0},{1} {2} has been created with Customer Number: {3} "
-                        , Cust.LName, Cust.FName, Cust.MName, Cust.CustomerID);
-                    Console.WriteLine(Sb.ToString());
+                    //Sb.AppendFormat("Customer {0},{1} {2} has been created with Customer Number: {3} "
+                    //    , Cust.LName, Cust.FName, Cust.MName, Cust.CustomerID);
+                    //Console.WriteLine(Sb.ToString());
                     return Cust;
                 }
                 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Customer RetrieveCustomer(string CustomerID)
+        {
+            try
+            {
+                Customer Found = CustomerList.Find(x => (x.CustomerID).Equals(CustomerID));
+                if (Found != null) return Found;
+                else return null;
             }
             catch (Exception ex)
             {

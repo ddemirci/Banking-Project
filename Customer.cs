@@ -45,7 +45,7 @@ namespace Banking_Project
         public string GenerateCustomerID(ref int counter)
         {
             StringBuilder Sb = new StringBuilder();
-            for (int i = 0; i < counter.ToString().Trim().Length; i++) Sb.Append("0");
+            for (int i = 0; i < 5 - counter.ToString().Trim().Length; i++) Sb.Append("0");
             Sb.Append(counter.ToString());
             counter++;
             return Sb.ToString();

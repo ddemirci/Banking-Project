@@ -15,7 +15,10 @@ namespace Banking_Project
             this.AccountID = "NI" + counter.ToString();
             this.Balance = decimal.Zero;
             this.CustomerID = CustomerNumber;
-            this.IsInterestAccount = false; 
+            this.IsInterestAccount = false;
+            StringBuilder SB = new StringBuilder();
+            SB.AppendFormat("Non-Interest Account {0} of Customer {1} has been created.", AccountID, CustomerID);
+            Console.WriteLine(SB.ToString());
         }
 
     }

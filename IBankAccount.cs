@@ -10,6 +10,6 @@ namespace Banking_Project
     {
         string withdrawMoney(decimal Amount);
         string depositMoney(decimal Amount);
-        string TransferMoney(string ReceiverAccountID, decimal Amount);
+        void TransferMoney(Bank Bank, string ReceiverAccountID, decimal Amount);
     }
 }

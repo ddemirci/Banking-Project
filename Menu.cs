@@ -9,14 +9,18 @@ namespace Banking_Project
 {
     class Menu
     {
+
+        Bank IsBank = new Bank();
+
         static void Main(string[] args)
         {
-            Program pg = new Program();
+            //Program pg = new Program();
             //Bank IsBank = new Bank();
             //Customer Doruk = IsBank.DefineCustomer("Doruk", "", "Demirci", "dorukdemirci.boun@gmail.com");
             //Console.WriteLine("Doruk's ID: " + Doruk.CustomerID);
             //BankAccount DoruksAccount = IsBank.OpenAccount(Doruk.CustomerID, 0);
             //BankAccount DoruksAnotherAccount = IsBank.OpenAccount(Doruk.CustomerID, 1);
+
             //Console.WriteLine("Doruk's money is " + DoruksAccount.Balance);
             //DoruksAccount.depositMoney(Convert.ToDecimal(2500));
             //Console.WriteLine("Doruk's money after deposit is " + DoruksAccount.Balance);
@@ -26,14 +30,19 @@ namespace Banking_Project
             //Console.WriteLine("Doruk's money after withdraw is " + DoruksAccount.Balance);
 
             ////Transfer
-            //DoruksAccount.TransferMoney(DoruksAccount.AccountID, 1000);
+            //DoruksAccount.TransferMoney(IsBank, DoruksAnotherAccount.AccountID, 1000);
             //Console.WriteLine("Doruk's money after transfer is " + DoruksAccount.Balance);
             //Console.WriteLine("Doruk's another account money after transfer is " + DoruksAnotherAccount.Balance);
+            //Console.Read();
+
 
             //Console.WriteLine(IsBank.RetrieveAllAccountInfo());
-            Menu mn = new Menu();
-            mn.showMenu();
-            Console.Read();
+            while (true)
+            {
+                Menu mn = new Menu();
+                mn.showMenu();
+                Console.Read();
+            }
 
         }
 
@@ -59,8 +68,8 @@ namespace Banking_Project
         {
             if (chosen == 1)
                 CreateCustomer();
-            //else if (chosen == 2)
-            //   OpenAnAccount();
+            else if (chosen == 3)
+                OpenAnAccount();
             //else
             //    DepositMoney();
         }
@@ -81,15 +90,28 @@ namespace Banking_Project
                 Customer c = new Customer(splitted[0], splitted[1], splitted[2], splitted[3]);
             }
             else
-                Console.WriteLine("Invalid input stream.")
-            
+                Console.WriteLine("Invalid input stream.");
+
         }
 
-        //public string OpenAnAccount()
-        //{
+        public void OpenAnAccount()
+        {
+            //Ask for CustomerID
+            Console.WriteLine("Opening an account, please specify the owner of the account.");
+            string CustomerId = Console.ReadLine();
 
-        //    throw new NotImplementedException();
-        //}
+            //Retrieve the customer
+            Customer Owner = IsBank.RetrieveCustomer(CustomerId);
+
+            //Ask for type 0 -> Interest  , 1->Non Interest . Specify it.
+            Console.Write("Specify type of the account, 0 for Interest Account, 1 for Non-Interest Account :");
+            string AccountType = Console.ReadLine();
+            int Type = int.Parse(AccountType);
+
+            //Open the account
+            IsBank.OpenAccount(CustomerId, Type);
+
+        }
         //public string DepositMoney()
         //{
 

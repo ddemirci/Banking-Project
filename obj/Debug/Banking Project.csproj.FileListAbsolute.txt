@@ -4,7 +4,6 @@ C:\Projects\BankingProject\Banking Project\obj\Debug\Banking Project.csproj.Core
 C:\Projects\BankingProject\bin\Debug\Banking Project.exe.config
 C:\Projects\BankingProject\bin\Debug\Banking Project.exe
 C:\Projects\BankingProject\bin\Debug\Banking Project.pdb
-C:\Projects\BankingProject\obj\Debug\Banking Project.csprojResolveAssemblyReference.cache
 C:\Projects\BankingProject\obj\Debug\Banking_Project.Properties.Resources.resources
 C:\Projects\BankingProject\obj\Debug\Banking Project.csproj.GenerateResource.Cache
 C:\Projects\BankingProject\obj\Debug\Banking Project.csproj.CoreCompileInputs.cache

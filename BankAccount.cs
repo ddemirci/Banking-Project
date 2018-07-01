@@ -77,32 +77,31 @@ namespace Banking_Project
             }
         }
 
-        public string TransferMoney(string ReceiverAccountID, decimal Amount)
+        public void TransferMoney(Bank Bank,string ReceiverAccountID, decimal Amount)
         {
             try
             {
                 if (this.Balance >= Amount && Amount > 0)
                 {
-                    Bank bank = new Bank();
-                    BankAccount Receiver = bank.RetrieveAccount(ReceiverAccountID);
+                    BankAccount Receiver = Bank.RetrieveAccount(ReceiverAccountID);
                     if (Receiver != null)
                     {
                         //this.withdrawMoney(Amount); //Withdraw money fonksiyonunda zaten kontrol var
                         //Found.depositMoney(Amount);
                         this.Balance -= Amount;
                         Receiver.Balance += Amount;
-                        return Amount + " TL has been transferred from Account ID: " + this.AccountID +
-                            "to Account ID: " + Receiver.AccountID;
+                        Console.WriteLine( Amount + " TL has been transferred from Account ID: " + this.AccountID +
+                            " to Account ID: " + Receiver.AccountID);
                     }
                     else
                     {
-                        return "There is no account with Account ID: " + ReceiverAccountID;
+                        Console.WriteLine("There is no account with Account ID: " + ReceiverAccountID);
                     }
                 }
                 else
                 {
-                    if (this.Balance < Amount) return "Insufficient funds";
-                    else return "Negative amount entered !";
+                    if (this.Balance < Amount) Console.WriteLine("Insufficient funds");
+                    else Console.WriteLine("Negative amount entered !");
                 }
             }
             catch (Exception ex)
