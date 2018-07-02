@@ -66,6 +66,7 @@
     <Compile Include="InterestAccount.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="NonInterestAccount.cs" />
+    <Compile Include="Numerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

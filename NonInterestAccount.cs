@@ -8,7 +8,8 @@ namespace Banking_Project
 {
     class NonInterestAccount : BankAccount
     {
-        int counter = 100000;
+        //int counter = 100000;
+        long counter = Numerator.GetInstance().NonIntrestAccountCounter();
 
         public NonInterestAccount(string CustomerNumber)
         {

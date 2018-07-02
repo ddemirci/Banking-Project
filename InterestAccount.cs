@@ -8,7 +8,8 @@ namespace Banking_Project
 {
     class InterestAccount : BankAccount
     {
-        int counter = 100000;
+        //int counter = 100000;
+        long counter = Numerator.GetInstance().NonIntrestAccountCounter();
         public decimal InterestRate;
 
         public InterestAccount(string CustomerNumber)

@@ -8,7 +8,8 @@ namespace Banking_Project
 {
     class Customer 
     {
-        int counter = 1;
+        //int counter = 1;
+        int counter = Numerator.GetInstance().CustomerCounter();
         public string FName;
         public string MName;
         public string LName;
@@ -20,7 +21,7 @@ namespace Banking_Project
         {
             this.FName = fname;
             this.LName = lname;
-            this.CustomerID = GenerateCustomerID(ref counter);
+            this.CustomerID = GenerateCustomerID(counter);
             this.Email = email;
             StringBuilder Sb = new StringBuilder();
             Sb.AppendFormat("Customer {0},{1} has been created with Customer Number: {2} ", LName, FName, CustomerID);
@@ -33,7 +34,7 @@ namespace Banking_Project
             this.FName = fname;
             this.MName = mname;
             this.LName = lname;
-            this.CustomerID = GenerateCustomerID(ref counter);
+            this.CustomerID = GenerateCustomerID(counter);
             this.Email = email;
 
 
@@ -42,7 +43,7 @@ namespace Banking_Project
             Console.WriteLine(Sb.ToString());
         }
 
-        public string GenerateCustomerID(ref int counter)
+        public string GenerateCustomerID(int counter)
         {
             StringBuilder Sb = new StringBuilder();
             for (int i = 0; i < 5 - counter.ToString().Trim().Length; i++) Sb.Append("0");
